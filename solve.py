@@ -4,7 +4,7 @@ author: @MartinJ45
 from fnmatch import fnmatch
 from random import randrange
 
-WORDLE_GUESSES = 5
+WORDLE_GUESSES = 6
 
 def getBestGuess(possibleAnswers, guess):
     bestGuess = ""
@@ -86,7 +86,7 @@ def main():
     There is no static list of answers for Wordle, but this list is a collection
     of frequent/past answers that the wordle will most likely be.
     '''
-    with open("wordle-answers.txt", "r") as fAnswers:
+    with open("valid-wordle-words.txt", "r") as fAnswers:
         allAnswers = [line.strip('\n') for line in fAnswers.readlines()]
     fAnswers.close()
 
